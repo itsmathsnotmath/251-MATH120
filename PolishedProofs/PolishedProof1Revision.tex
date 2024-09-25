@@ -31,14 +31,17 @@
 %                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
-\usepackage{amsmath, amsthm, amsfonts} % These packages contain most of the commands needed to format the maths symbols.
+\usepackage{amsmath, amsthm, amsfonts, amssymb} % These packages contain most of the commands needed to format the maths symbols.
 \usepackage{enumerate} % Package that contains options for the \begin{enumerate} environment.
 \usepackage{hyperref} % Package that allows hyperlinks.
+\usepackage[dvipsnames]{xcolor} % Package that allows the use of a variety of colours.
 \newtheorem*{theorem}{Theorem} % Defines an environment with the heading "Theorem". The * supresses the numbering.
-\newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
 \theoremstyle{definition}
+\newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
 \newtheorem*{definition}{Definition} % Defines an environment with the heading "Definition". The * supresses the numbering.
-\newenvironment{solution}{\bigskip\hrule{\hfill}}{\bigskip\hrule{\hfill}} % Defines an environment that draws lines to make clear where your solution starts and ends.
+\newtheorem*{reflection}{Reflection} % Defines an environment with the heading "Definition". The * supresses the numbering.
+\newenvironment{solution}{\bigskip\hrule{\hfill}}{\bigskip\hrule{\hfill}}
+
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                              %
@@ -49,11 +52,11 @@
 %                                                              %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\title{\textbf{MATH-UA 120 Discrete Mathematics: \\ Problem Set 9}}
+\title{\textbf{MATH-UA 120 Discrete Mathematics: \\ Polished Proof 1 - Revised Draft}}
 \author{%
-    Queen Elizabeth % Change to your name!
+    Winnie-the-Pooh % Change to your name!
 }
-\date{Due Monday, December 9th, 2024} % The due date of the assignment. All assignemets are dues at 11:59pm on the date listed
+\date{Due Monday, September 30th, 2024} % The due date of the assignment. All assignemets are dues at 11:59pm on the date listed
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                              %
@@ -67,17 +70,19 @@
 
 \vfill
 
-% The following are the asignment instructions. You should leave these alone and, after reading them, proceed to the problems.
-\section*{Assignment Instructions}
+% The following are the instructions and guidelines for the polished proof. You should leave these alone and, after reading them, proceed to the problems.
+
+\section*{Polished Proof Instructions}
 
 \begin{itemize}
     \item These are to be written up in \LaTeX{} and turned in on Gradescope.
-    \item \href{https://bit.ly/3yZ1C7Q}{\textbf{Click here to duplicate this \texttt{.tex} file in Overleaf}}.
-    \item Write your solutions inside the \texttt{solution} environment.
-    \item You are always encouraged to talk problems through with your peers and your instructor, but your write up should be done independently.
-    \item Problems are graded on correctness and fluency.
-    \item Unless stated otherwise, all calculations require justification.
+    \item \href{https://bit.ly/4gxMEGA}{\textbf{Click here to duplicate this \texttt{.tex} file in Overleaf}}.
     \item Some tutorials on how to use \LaTeX{} can be found \href{https://www.overleaf.com/learn/latex/Tutorials}{\underline{here}}. If you have any questions about \LaTeX{} commands you can always ask your instructor for advice.
+    \item This polished proof assignment contains two problems and a reflection. Choose \textbf{one} problem to complete and submit for grading, and complete the reflection based on the given prompts.
+    \item Polished proofs are held to a higher standard than regular assignments and exams. You are given two chances to submit this proof: a first draft that will be scrutinised and given back with detailed feedback on how to make the proof ``polished'', and a second (final) draft where you will take on board the feedback of the first draft and make improvements to your proof.
+    \item This is the first draft of the assignment.
+    \item The score of the assignment is out of 15 marks: 9 come from the \href{https://drive.google.com/file/d/1YZhhGv5OyPdx0-VDa6i6cftkzPromMRY/view?usp=drive_link}{\textbf{RVF rubric}}, 3 points are given for the proper use of \LaTeX{} and the remaining 3 points are for a reflection of the assignment.
+    \item Your final score for the polished proof will be the maximum of the score of the first draft and the average of the scores of both drafts.
 \end{itemize}
 
 \vfill
@@ -95,162 +100,59 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 1                      %%%%%
+%%%%%                     Proof Options                    %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Problem 1}
+\section*{Proof Options}
 
-\begin{solution}
+Choose \textbf{one} of the following proofs to complete and submit for grading.
 
-% Type your solution to Problem 1 here.
+\begin{enumerate}
+    \item Let $n$ be an integer. Prove that there exist integers $x$ and $y$ such that $n=6x+4y$ if and only if $n$ is divisible by $2$.
+    \item Let $n$ be an integer. Prove that there exists an integer $x$ such that $n=3x-1$ if and only if there exists an integer $y$ such that $n=3y+5$.
+\end{enumerate}
 
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 2                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 2}
-
-\begin{solution}
-
-% Type your solution to Problem 2 here.
-
-\end{solution}
+\noindent You must explain every step of your proof. You may quote and use definitions and results from Sections 1--12 of the textbook or Appendix D, as long as you reference them appropriately.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+\vfill
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 3                      %%%%%
+%%%%%                 Reflection Instructions              %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Problem 3}
+\section*{Reflection Instructions}
 
-\begin{solution}
+Provide at least a paragraph explaining your process for completing the proof you have chosen above. You may use the following prompts to guide your response and any additional information needed to support your reflection. Responses consisting of one sentence or less for each of the following prompts will not be acceptable.
 
-% Type your solution to Problem 3 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 4                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 4}
-
-\begin{solution}
-
-% Type your solution to Problem 4 here.
-
-\end{solution}
+\begin{itemize}
+    \item What did you realise worked and/or didn't work for your first draft?
+    \item How did you change/adjust your strategy this time?
+    \item Compared to your first draft, what stayed the same and what is different for the final draft?
+    \item Have you identified a type of mistake you might be particularly prone to? If so, how do you think you'll try to catch yourself making that mistake in the future?
+    \item Is there anthing else you've learnt or improved by doing this assignment?
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+\vfill
+\hrule\medskip
+\noindent Start your submission on a new page.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 5                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newpage
 
-\section*{Problem 5}
+% \begin{claim}
+%     % Write the statement you intend to prove.
+% \end{claim}
 
-\begin{solution}
+% \begin{proof}
+%     % Write the your proof here.
+% \end{proof}
 
-% Type your solution to Problem 5 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 6                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 6}
-
-\begin{solution}
-
-% Type your solution to Problem 6 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 7                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 7}
-
-\begin{solution}
-
-% Type your solution to Problem 7 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 8                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 8}
-
-\begin{solution}
-
-% Type your solution to Problem 8 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 9                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 9}
-
-\begin{solution}
-
-% Type your solution to Problem 9 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 10                     %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 10}
-
-\begin{solution}
-
-% Type your solution to Problem 10 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{reflection}
+%     % Write your reflection here
+% \end{reflection}
 
 \end{document}
 %

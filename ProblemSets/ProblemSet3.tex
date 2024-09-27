@@ -39,6 +39,7 @@
 \newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition} % Defines an environment with the heading "Definition". The * supresses the numbering.
+\newtheorem*{proposition}{Proposition} % Defines an environment with the heading "Proposition". The * supresses the numbering.
 \newenvironment{solution}{\bigskip\hrule{\hfill}}{\bigskip\hrule{\hfill}} % Defines an environment that draws lines to make clear where your solution starts and ends.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -352,11 +353,16 @@ The \emph{Fibonacci numbers} are a sequence of integers $\left\{f_n\right\}_{n\i
     \end{tikzpicture}
 \end{center}
 
-\noindent As it turns out, the number of different ways to tile a $1\times n$ board using only square and domino tiles is $f_n$! \bigskip
+\noindent As it turns out, the number of different ways to tile a $1\times n$ board using only square and domino tiles is $f_n$! 
+\begin{proposition}
+    For any positive integer $n$, the number of ways to tile a $1\times n$ using only square and domino tiles is $f_n$, the $n^{\text{th}}$ Fibonacci number.
+\end{proposition}
 
-\noindent Use this setting to come up with a combinatorial proof of the identity $$f_{2n}=\left(f_n\right)^2+\left(f_{n-1}\right)^2.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted. \bigskip
+\bigskip
 
-\noindent \emph{Hint: For the hard side of the identity, consider the tile that is covering the $n$th square.}
+\noindent Use this setting (and the above proposition) to come up with a combinatorial proof of the identity $$f_{2n}=\left(f_n\right)^2+\left(f_{n-1}\right)^2.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted. \bigskip
+
+\noindent \emph{Hint: For the hard side of the identity, consider the tile that is covering the $n^\text{th}$ square.}
 \begin{solution}
 
 % Type your solution to Problem 10 here.

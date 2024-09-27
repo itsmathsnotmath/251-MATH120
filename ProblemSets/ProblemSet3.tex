@@ -299,7 +299,7 @@ Give a combinatorial proof of the identity $$n^3=n\left(n-1\right)\left(n-2\righ
 \section*{Problem 10}
 The \emph{Fibonacci numbers} are a sequence of integers $\left\{f_n\right\}_{n\in\mathbb{N}}$ defined recursively by $$f_0=1,\quad f_1=1, \quad f_n=f_{n-1}+f_{n-2}\text{ for }n\geq2.$$ The sequence begins $1,1,2,3,5,8,13,\dots$. \bigskip
 
-\noindent Consider the following question: How many ways are there to tile a $1\times n$ board using only square ($1\times 1$) and domino ($1\times 2$) tiles?
+\noindent Consider the following question: How many different ways are there to tile a $1\times n$ board using only square ($1\times 1$) and domino ($1\times 2$) tiles?
 \begin{center}
     \begin{tikzpicture}
         \def\n{4}
@@ -317,8 +317,7 @@ The \emph{Fibonacci numbers} are a sequence of integers $\left\{f_n\right\}_{n\i
         \def\t{0.1}
         \draw (0,0) -- (0,1) -- (1,1) -- (1,0) -- (0,0);
         \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({0+\t},{0+\t}) -- ({0+\t},{1-\t}) -- ({1-\t},{1-\t}) -- ({1-\t},{0+\t}) -- ({0+\t},{0+\t});
-        \draw (0.5,-2) node {Tilings of a $1\times 1$ board};
-        \def\n{0}\def\X{3.5}
+        \def\n{0}\def\X{3}
         \draw ({\X},-0.75) -- ({\X},0.25); \draw ({\X},0.75) -- ({\X},1.75);
         \foreach\y in {-0.75,0.75}{\foreach\x in {0,...,\n}{
             \filldraw[fill=black!40!white] ({\X+\x+1},{\y}) -- ({\X+\x+2},{\y}) -- ({\X+\x+2},{\y+1}) -- ({\X+\x+1},{\y+1});
@@ -328,7 +327,6 @@ The \emph{Fibonacci numbers} are a sequence of integers $\left\{f_n\right\}_{n\i
             \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\x+\t},{0.75+\t}) -- ({\X+\x+\t},{1.75-\t}) -- ({\X+\x+1-\t},{1.75-\t}) -- ({\X+\x+1-\t},{0.75+\t}) -- ({\X+\x+\t},{0.75+\t});
         }
         \filldraw[very thick,red,fill=red!75!white,opacity=0.65] ({\X+\t},{-0.75+\t}) -- ({\X+\t},{0.25-\t}) -- ({\X+2-\t},{0.25-\t}) -- ({\X+2-\t},{-0.75+\t}) -- ({\X+\t},{-0.75+\t});
-        \draw ({\X+1},-2) node {Tilings of a $2\times 2$ board};
         \def\X{7}
         \draw ({\X},0) -- ({\X},1);
         \foreach\x in {0,...,\n}{
@@ -351,11 +349,10 @@ The \emph{Fibonacci numbers} are a sequence of integers $\left\{f_n\right\}_{n\i
             \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\t+2-2*\a},{\t+1.5*\a-0.75}) -- ({\X+\t+2-2*\a},{1-\t+1.5*\a-0.75}) -- ({\X+1-\t+2-2*\a},{1-\t+1.5*\a-0.75}) -- ({\X+1-\t+2-2*\a},{\t+1.5*\a-0.75}) -- ({\X+\t+2-2*\a},{\t+1.5*\a-0.75});
             \filldraw[very thick,red,fill=red!75!white,opacity=0.65] ({\X+\t+\a},{\t+1.5*\a-0.75}) -- ({\X+\t+\a},{1-\t+1.5*\a-0.75}) -- ({\X+2-\t+\a},{1-\t+1.5*\a-0.75}) -- ({\X+2-\t+\a},{\t+1.5*\a-0.75}) -- ({\X+\t+\a},{\t+1.5*\a-0.75});
         }
-        \draw ({\X-0.5},-2) node {Tilings of a $3\times 3$ board};
     \end{tikzpicture}
 \end{center}
 
-\noindent As it turns out, the number of ways to tile a $1\times n$ board using only square and domino tiles is $f_n$! \bigskip
+\noindent As it turns out, the number of different ways to tile a $1\times n$ board using only square and domino tiles is $f_n$! \bigskip
 
 \noindent Use this setting to come up with a combinatorial proof of the identity $$f_{2n}=\left(f_n\right)^2+\left(f_{n-1}\right)^2.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted. \bigskip
 

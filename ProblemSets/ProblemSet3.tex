@@ -34,6 +34,7 @@
 \usepackage{amsmath, amsthm, amsfonts} % These packages contain most of the commands needed to format the maths symbols.
 \usepackage{enumerate} % Package that contains options for the \begin{enumerate} environment.
 \usepackage{hyperref} % Package that allows hyperlinks.
+\usepackage{tikz}
 \newtheorem*{theorem}{Theorem} % Defines an environment with the heading "Theorem". The * supresses the numbering.
 \newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
 \theoremstyle{definition}
@@ -99,7 +100,32 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 1}
-
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Consider the following subsets of $\mathbb{N}$.
+    \begin{align*}
+        A & = \text{The set of all even numbers.} \\
+        B & = \text{The set of all prime numbers.} \\
+        C & = \text{The set of all perfect squares.} \\
+        D & = \text{The set of all multiples of }10.
+    \end{align*}
+    Using only the symbols $$3,A,B,C,D,\mathbb{N},\in,\subseteq,=,\neq,\cap,\cup,\times,-,\emptyset,(,)$$ rewrite the following statements in set notation.
+    \begin{enumerate}[i.] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with Roman numerals instead.
+        \item None of the perfect squares are prime numbers.
+        \item The number $3$ is a prime number that is not even.
+        \item If you take all of the prime numbers, all of the even numbers, all of the perfect squares and all of the multiples of $10$, you still won't have all of the natural numbers.
+    \end{enumerate}
+    \item Consider the following subsets of the set of all students at a university.
+    \begin{align*}
+        F & = \text{The set of all freshmen}. \\
+        S & = \text{The set of all seniors}. \\
+        M & = \text{The set of all maths majors}. \\
+        C & = \text{The set of all CS majors}. 
+    \end{align*}
+    \begin{enumerate}[i.] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with Roman numerals instead.
+        \item Using only the symbols $$F,S,M,C,\left|~\right|,\cap,\cup,-,>$$ translate the following statement written in English into a statement written in the language of set theory: ``There are more freshmen that aren't maths majors that there are senior CS majors.''
+        \item Translate the following statement written in the language of set theory into a statement in English: $\left(F\cap M\right)\subseteq C$.
+    \end{enumerate}
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 1 here.
@@ -115,7 +141,14 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 2}
-
+Describe explicitly in English the following sets, then give their cardinality.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item $\left\{x\in 2^{\mathbb{Z}}\mid 5\in x\right\}$
+    \item $\left\{x\in 2^{\mathbb{Z}}\mid x\subseteq\{1,2,3\}\right\}$
+    \item $\left\{x\in 2^{\mathbb{Z}}\mid x\subset\{1,2,\{3,4\}\}\right\}$
+    \item $\left\{x\in 2^{\mathbb{Z}}\mid x\in\{1,2,\{3,4\}\}\right\}$
+    \item $\left\{x\in 2^{\mathbb{Z}}\mid y\in x\Longrightarrow y=0\right\}$
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 2 here.
@@ -131,7 +164,18 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 3}
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item For each of the following statements, describe it in English and say if is true or false (without proof). Then write its negation using quantifiers and describe this negation in English. \medskip
 
+    For example: The statement $\forall x\in\mathbb{Z},x<0$ means every integer is negative, and it is false. Its negation is $\exists x\in\mathbb{Z},x\geq 0$, which means that there exists a nonnegative integer.
+    \begin{enumerate}[i.] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with Roman numerals instead.
+        \item $\forall x\in\mathbb{Z},~\exists y\in\mathbb{Z},~x^2+y=4$
+        \item $\exists y\in\mathbb{Z},~\forall x\in\mathbb{Z},~x^2+y=4$
+        \item $\forall n\in\mathbb{Z},~\exists k\in\mathbb{Z},~\exists d\in\mathbb{Z},~k+n=2d$
+        \item $\exists n\in\mathbb{Z},~\forall k\in\mathbb{Z},~\exists d\in\mathbb{Z},~k+n=2d$
+    \end{enumerate}
+    \item For each of the statements iii. and iv.: prove it if it is true, or prove the negation if it is false.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 3 here.
@@ -147,7 +191,11 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 4}
+Let $I=\{1,2,\dots,n\}$. We can denote a collection of sets $\left\{A_1,A_2,\dots,A_n\right\}$, by $\left\{A_i\right\}_{i\in I}$. (We refer to $i$ as the \emph{index} variable). \medskip
 
+\noindent We say $\left\{A_i\right\}_{i\in I}$ is \textbf{disjoint} if $\displaystyle\bigcap_{i\in I}A_i=\emptyset$ (the intersection of all sets $A_i$) and we say $\left\{A_i\right\}_{i\in I}$ is \textbf{pairwise disjoint} if $A_i\cap A_j=\emptyset$ whenever $i\neq j$. \medskip
+
+\noindent Prove that if $\left\{A_i\right\}_{i\in I}$ is pairwise disjoint, then $\left\{A_i\right\}_{i\in I}$ is disjoint.
 \begin{solution}
 
 % Type your solution to Problem 4 here.
@@ -163,7 +211,13 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 5}
-
+In a survey of soda preference between three brands $A$, $B$ and $C$, it found that $60$ people like $A$, $55$ people like $B$, $40$ people like $C$, $20$ people like both $A$ and $B$, $35$ people like both $B$ and $C$, $15$ people like both $A$ and $C$, and $10$ people like all three sodas. Assuming that everyone likes at least one of the three soda brands, find the following:
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item The number of people who participated in the survey.
+    \item The number of people who like soda $B$ only.
+    \item The number of people who like sodas $A$ and $C$, but not soda $B$.
+    \item The number of people who do not like soda $B$.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 5 here.
@@ -179,7 +233,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 6}
-
+Let $A=\left\{x\in\mathbb{Z}\mid 100\leq x\leq 999\right\}$ and $A_i=\left\{x\in A\mid i^{\text{th}}\text{ digit of }x\text{ is }i\right\}$. Find $\left|A_1\cup A_2\cup A_3\right|$.
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -195,7 +249,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 7}
-
+Prove that for any sets $A$ and $B$, $A\Delta\left(A\cap B\right)=A-B$.
 \begin{solution}
 
 % Type your solution to Problem 7 here.
@@ -211,7 +265,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 8}
-
+Prove that for any sets $A$ and $B$, $2^{A-B}\subseteq\left(2^A-2^B\right)\cup\{\emptyset\}$.
 \begin{solution}
 
 % Type your solution to Problem 8 here.
@@ -227,7 +281,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 9}
-
+Give a combinatorial proof of the identity $$n^3=n\left(n-1\right)\left(n-2\right)+3n\left(n-1\right)+n.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted.
 \begin{solution}
 
 % Type your solution to Problem 9 here.
@@ -243,7 +297,69 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 10}
+The \emph{Fibonacci numbers} are a sequence of integers $\left\{f_n\right\}_{n\in\mathbb{N}}$ defined recursively by $$f_0=1,\quad f_1=1, \quad f_n=f_{n-1}+f_{n-2}\text{ for }n\geq2.$$ The sequence begins $1,1,2,3,5,8,13,\dots$. \bigskip
 
+\noindent Consider the following question: How many ways are there to tile a $1\times n$ board using only square ($1\times 1$) and domino ($1\times 2$) tiles?
+\begin{center}
+    \begin{tikzpicture}
+        \def\n{4}
+        \draw (0,0) -- (0,1);
+        \foreach\x in {0,...,\n}{
+            \filldraw[fill=black!40!white] ({2*\x+1},0) -- ({2*\x+2},0) -- ({2*\x+2},1) -- ({2*\x+1},1);
+            \draw ({2*\x},0) -- ({2*\x+1},0) -- ({2*\x+1},1) -- ({2*\x},1);
+        }
+    \end{tikzpicture}
+\end{center}
+
+\noindent For example, $1\times1$, $1\times 2$ and $1\times 3$ boards can be shaded in the following ways
+\begin{center}
+    \begin{tikzpicture}
+        \def\t{0.1}
+        \draw (0,0) -- (0,1) -- (1,1) -- (1,0) -- (0,0);
+        \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({0+\t},{0+\t}) -- ({0+\t},{1-\t}) -- ({1-\t},{1-\t}) -- ({1-\t},{0+\t}) -- ({0+\t},{0+\t});
+        \draw (0.5,-2) node {Tilings of a $1\times 1$ board};
+        \def\n{0}\def\X{3.5}
+        \draw ({\X},-0.75) -- ({\X},0.25); \draw ({\X},0.75) -- ({\X},1.75);
+        \foreach\y in {-0.75,0.75}{\foreach\x in {0,...,\n}{
+            \filldraw[fill=black!40!white] ({\X+\x+1},{\y}) -- ({\X+\x+2},{\y}) -- ({\X+\x+2},{\y+1}) -- ({\X+\x+1},{\y+1});
+            \draw ({\X+\x},{\y}) -- ({\X+\x+1},{\y}) -- ({\X+\x+1},{\y+1}) -- ({\X+\x},{{\y+1}});
+        }}
+        \foreach\x in {0,1}{
+            \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\x+\t},{0.75+\t}) -- ({\X+\x+\t},{1.75-\t}) -- ({\X+\x+1-\t},{1.75-\t}) -- ({\X+\x+1-\t},{0.75+\t}) -- ({\X+\x+\t},{0.75+\t});
+        }
+        \filldraw[very thick,red,fill=red!75!white,opacity=0.65] ({\X+\t},{-0.75+\t}) -- ({\X+\t},{0.25-\t}) -- ({\X+2-\t},{0.25-\t}) -- ({\X+2-\t},{-0.75+\t}) -- ({\X+\t},{-0.75+\t});
+        \draw ({\X+1},-2) node {Tilings of a $2\times 2$ board};
+        \def\X{7}
+        \draw ({\X},0) -- ({\X},1);
+        \foreach\x in {0,...,\n}{
+            \filldraw[fill=black!40!white] ({\X+\x+1},{0}) -- ({\X+\x+2},{0}) -- ({\X+\x+2},{1}) -- ({\X+\x+1},{1});
+            \draw ({\X+\x},{0}) -- ({\X+\x+1},{0}) -- ({\X+\x+1},{1}) -- ({\X+\x},{{1}});
+        }
+        \draw ({\X+\n+2},{0}) -- ({\X+\n+3},{0}) -- ({\X+\n+3},{1}) -- ({\X+\n+2},{1});
+        \foreach\x in {0,1,2}{
+            \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\x+\t},{\t}) -- ({\X+\x+\t},{1-\t}) -- ({\X+\x+1-\t},{1-\t}) -- ({\X+\x+1-\t},{\t}) -- ({\X+\x+\t},{\t});
+        }
+        \def\X{10.5}
+        \draw ({\X},-0.75) -- ({\X},0.25); \draw ({\X},0.75) -- ({\X},1.75);
+        \foreach\y in {-0.75,0.75}{\foreach\x in {0,...,\n}{
+            \filldraw[fill=black!40!white] ({\X+\x+1},{\y}) -- ({\X+\x+2},{\y}) -- ({\X+\x+2},{\y+1}) -- ({\X+\x+1},{\y+1});
+            \draw ({\X+\x},{\y}) -- ({\X+\x+1},{\y}) -- ({\X+\x+1},{\y+1}) -- ({\X+\x},{{\y+1}});
+        }
+        \draw ({\X+\n+2},{\y}) -- ({\X+\n+3},{\y}) -- ({\X+\n+3},{\y+1}) -- ({\X+\n+2},{\y+1});
+        }
+        \foreach\a in {0,1}{
+            \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\t+2-2*\a},{\t+1.5*\a-0.75}) -- ({\X+\t+2-2*\a},{1-\t+1.5*\a-0.75}) -- ({\X+1-\t+2-2*\a},{1-\t+1.5*\a-0.75}) -- ({\X+1-\t+2-2*\a},{\t+1.5*\a-0.75}) -- ({\X+\t+2-2*\a},{\t+1.5*\a-0.75});
+            \filldraw[very thick,red,fill=red!75!white,opacity=0.65] ({\X+\t+\a},{\t+1.5*\a-0.75}) -- ({\X+\t+\a},{1-\t+1.5*\a-0.75}) -- ({\X+2-\t+\a},{1-\t+1.5*\a-0.75}) -- ({\X+2-\t+\a},{\t+1.5*\a-0.75}) -- ({\X+\t+\a},{\t+1.5*\a-0.75});
+        }
+        \draw ({\X-0.5},-2) node {Tilings of a $3\times 3$ board};
+    \end{tikzpicture}
+\end{center}
+
+\noindent As it turns out, the number of ways to tile a $1\times n$ board using only square and domino tiles is $f_n$! \bigskip
+
+\noindent Use this setting to come up with a combinatorial proof of the identity $$f_{2n}=\left(f_n\right)^2+\left(f_{n-1}\right)^2.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted. \bigskip
+
+\noindent \emph{Hint: For the hard side of the identity, consider the tile that is covering the $n$th square.}
 \begin{solution}
 
 % Type your solution to Problem 10 here.

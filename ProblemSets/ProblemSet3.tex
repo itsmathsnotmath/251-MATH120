@@ -228,7 +228,7 @@ In a survey of soda preference between three brands $A$, $B$ and $C$, it found t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 6}
-Let $A=\left\{x\in\mathbb{Z}\mid 100\leq x\leq 999\right\}$ and $A_i=\left\{x\in A\mid i^{\text{th}}\text{ digit of }x\text{ is }i\right\}$. Find $\left|A_1\cup A_2\cup A_3\right|$.
+Prove that for any sets $A$ and $B$, $A\Delta\left(A\cap B\right)=A-B$.
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -260,76 +260,10 @@ Let $n$ be a positive integer. Give a combinatorial proof of the identity $$3^n-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 8}
-The \emph{Fibonacci numbers} are a sequence of integers $\left(f_n\right)_{n\in\mathbb{N}}$ defined recursively by $$f_0=1,\quad f_1=1, \quad f_n=f_{n-1}+f_{n-2}\text{ for }n\geq2.$$ The sequence begins $1,1,2,3,5,8,13,\dots$. \bigskip
-
-\noindent Consider the following question: How many different ways are there to tile a $1\times n$ board using only square ($1\times 1$) and domino ($1\times 2$) tiles?
-\begin{center}
-    \begin{tikzpicture}
-        \def\n{4}
-        \draw (0,0) -- (0,1);
-        \foreach\x in {0,...,\n}{
-            \filldraw[fill=black!40!white] ({2*\x+1},0) -- ({2*\x+2},0) -- ({2*\x+2},1) -- ({2*\x+1},1);
-            \draw ({2*\x},0) -- ({2*\x+1},0) -- ({2*\x+1},1) -- ({2*\x},1);
-        }
-    \end{tikzpicture}
-\end{center}
-
-\noindent For example, $1\times1$, $1\times 2$ and $1\times 3$ boards can be tiled in the following ways
-\begin{center}
-    \begin{tikzpicture}
-        \def\t{0.1}
-        \draw (0,0) -- (0,1) -- (1,1) -- (1,0) -- (0,0);
-        \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({0+\t},{0+\t}) -- ({0+\t},{1-\t}) -- ({1-\t},{1-\t}) -- ({1-\t},{0+\t}) -- ({0+\t},{0+\t});
-        \def\n{0}\def\X{3}
-        \draw ({\X},-0.75) -- ({\X},0.25); \draw ({\X},0.75) -- ({\X},1.75);
-        \foreach\y in {-0.75,0.75}{\foreach\x in {0,...,\n}{
-            \filldraw[fill=black!40!white] ({\X+\x+1},{\y}) -- ({\X+\x+2},{\y}) -- ({\X+\x+2},{\y+1}) -- ({\X+\x+1},{\y+1});
-            \draw ({\X+\x},{\y}) -- ({\X+\x+1},{\y}) -- ({\X+\x+1},{\y+1}) -- ({\X+\x},{{\y+1}});
-        }}
-        \foreach\x in {0,1}{
-            \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\x+\t},{0.75+\t}) -- ({\X+\x+\t},{1.75-\t}) -- ({\X+\x+1-\t},{1.75-\t}) -- ({\X+\x+1-\t},{0.75+\t}) -- ({\X+\x+\t},{0.75+\t});
-        }
-        \filldraw[very thick,red,fill=red!75!white,opacity=0.65] ({\X+\t},{-0.75+\t}) -- ({\X+\t},{0.25-\t}) -- ({\X+2-\t},{0.25-\t}) -- ({\X+2-\t},{-0.75+\t}) -- ({\X+\t},{-0.75+\t});
-        \def\X{7}
-        \draw ({\X},0) -- ({\X},1);
-        \foreach\x in {0,...,\n}{
-            \filldraw[fill=black!40!white] ({\X+\x+1},{0}) -- ({\X+\x+2},{0}) -- ({\X+\x+2},{1}) -- ({\X+\x+1},{1});
-            \draw ({\X+\x},{0}) -- ({\X+\x+1},{0}) -- ({\X+\x+1},{1}) -- ({\X+\x},{{1}});
-        }
-        \draw ({\X+\n+2},{0}) -- ({\X+\n+3},{0}) -- ({\X+\n+3},{1}) -- ({\X+\n+2},{1});
-        \foreach\x in {0,1,2}{
-            \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\x+\t},{\t}) -- ({\X+\x+\t},{1-\t}) -- ({\X+\x+1-\t},{1-\t}) -- ({\X+\x+1-\t},{\t}) -- ({\X+\x+\t},{\t});
-        }
-        \def\X{10.5}
-        \draw ({\X},-0.75) -- ({\X},0.25); \draw ({\X},0.75) -- ({\X},1.75);
-        \foreach\y in {-0.75,0.75}{\foreach\x in {0,...,\n}{
-            \filldraw[fill=black!40!white] ({\X+\x+1},{\y}) -- ({\X+\x+2},{\y}) -- ({\X+\x+2},{\y+1}) -- ({\X+\x+1},{\y+1});
-            \draw ({\X+\x},{\y}) -- ({\X+\x+1},{\y}) -- ({\X+\x+1},{\y+1}) -- ({\X+\x},{{\y+1}});
-        }
-        \draw ({\X+\n+2},{\y}) -- ({\X+\n+3},{\y}) -- ({\X+\n+3},{\y+1}) -- ({\X+\n+2},{\y+1});
-        }
-        \foreach\a in {0,1}{
-            \filldraw[very thick,blue,fill=blue!75!white,opacity=0.65] ({\X+\t+2-2*\a},{\t+1.5*\a-0.75}) -- ({\X+\t+2-2*\a},{1-\t+1.5*\a-0.75}) -- ({\X+1-\t+2-2*\a},{1-\t+1.5*\a-0.75}) -- ({\X+1-\t+2-2*\a},{\t+1.5*\a-0.75}) -- ({\X+\t+2-2*\a},{\t+1.5*\a-0.75});
-            \filldraw[very thick,red,fill=red!75!white,opacity=0.65] ({\X+\t+\a},{\t+1.5*\a-0.75}) -- ({\X+\t+\a},{1-\t+1.5*\a-0.75}) -- ({\X+2-\t+\a},{1-\t+1.5*\a-0.75}) -- ({\X+2-\t+\a},{\t+1.5*\a-0.75}) -- ({\X+\t+\a},{\t+1.5*\a-0.75});
-        }
-    \end{tikzpicture}
-\end{center}
-
-\noindent As it turns out, the number of different ways to tile a $1\times n$ board using only square and domino tiles is $f_n$! 
-\begin{proposition}
-    For any positive integer $n$, the number of ways to tile a $1\times n$ using only square and domino tiles is $f_n$, the $n^{\text{th}}$ Fibonacci number.
-\end{proposition}
-
-\bigskip
-
-\noindent Use this setting (and the above proposition) to come up with a combinatorial proof of the identity $$f_{2n}=\left(f_n\right)^2+\left(f_{n-1}\right)^2.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted. \bigskip
-
-\noindent \emph{Hint: For the hard side of the identity, consider the tile that is covering the $n^\text{th}$ square.}
+Give a combinatorial proof of the identity $$n^3=n\left(n-1\right)\left(n-2\right)+3n\left(n-1\right)+n.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted.
 \begin{solution}
 
 % Type your solution to Problem 8 here.
-
-% If you'd like to include a picture to help your explanation, you can use the \includegraphics command to insert a photo.
 
 \end{solution}
 

@@ -99,7 +99,11 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 1}
-
+Define a relation $R$ on $\mathbb{N}\times\mathbb{N}$ by $$\left(a,b\right)\mathrel{R}\left(c,d\right)\Longleftrightarrow3a+d=b+3c.$$
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Show that $R$ is an equivalence relation,
+    \item Describe the equivalence classes $\left[\left(0,0\right)\right]$, $\left[\left(1,2\right)\right]$ and $\left[\left(2,1\right)\right]$.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 1 here.
@@ -115,7 +119,18 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 2}
-
+Determine if the give relations have the following properties:
+\begin{itemize}
+    \item irreflexive,
+    \item antisymmetric,
+    \item transitive.
+\end{itemize}
+Either prove they have the property or provide a counterexample.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item For $x,y\in\mathbb{Z}$, $x\mathrel{R}y\Longleftrightarrow\left|x-y\right|>0$.
+    \item For $x,y\in\mathbb{Z}$, $x\mathrel{R}y$ means that $x$ and $y$ have a common prime factor, that is, a prime number that divides both $x$ and $y$.
+    \item For $x,y\in 2^{\mathbb{Z}}$, $x\mathrel{R}y\Longleftrightarrow x\cap y=\emptyset$.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 2 here.
@@ -131,7 +146,15 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 3}
+Determine all of the (distinct) equivalence classes of the following equivalence relations. Provide a brief justification on how you found all of the equivalence classes for each relation. \medskip
 
+\emph{There is no need to prove that they are equivalence relations; but you are encourage to prove they are equivalence relations in your own practice.}
+
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Consider the set $A=\{0,1,2,\dots,8\}$. Define a relation $R$ on $A$ by $a\mathrel{R}b\Longleftrightarrow a^2\equiv b^2\pmod{9}$.
+    \item On $\mathbb{Z}$, define a relation $R$ by $a\mathrel{R}b\Longleftrightarrow 3a-5b$ is even.
+    \item On $\mathbb{Z}$, define a relation $R$ by $a\mathrel{R}b\Longleftrightarrow 4\mid\left(a+3b\right)$.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 3 here.
@@ -147,7 +170,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 4}
-
+Let $R$ be a relation on a set $A$. Prove $R\cup R^{-1}$ is symmetric.
 \begin{solution}
 
 % Type your solution to Problem 4 here.
@@ -163,7 +186,14 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 5}
-
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Let $X$ be a set with $n$ elements. How many possible reflexive relations on $X$ are there?
+    \item Let $A$ be a set with size $n$. For $x,y\in 2^A$, $x\mathrel{R}y\Longleftrightarrow x\cap y=\emptyset$. What is the cardinality of $R$?
+    \item What is the total number of partitions of $\left\{1,2,\dots,100\right\}$ that have exactly two parts in the partition? Remember, both parts should be non-empty.
+    \item Suppose that a single character is stored in a computer using eight bits. How many bit patterns have at least two $1$'s? (Bits can either be $0$ or $1$).
+    \item Twenty people are to be divided into two teams with ten players on each team. In how many ways can this be done?
+    \item Thirty-five discrete maths students are to be divided into secen discussion groups, each consisting of five students. In how many ways can this be done?
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 5 here.
@@ -179,7 +209,13 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 6}
-
+We are to place five posters along the wall of a corridor. There are six movie posters, five music posters and eight maths posters to choose from. In each of the following cases, determine the number of arrangements and give a brief justification in words.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item How many arrangements of posters are there if there are no restrictions?
+    \item How many arrangements of posters are there if we cannot have more than two maths posters?
+    \item How many arrangements of posters are there if we cannot have two music posters side-by-side?
+\end{enumerate}
+\emph{You can (and should) leave your answers in terms of factorials and binomial coefficients where appropriate.}
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -195,7 +231,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 7}
-
+Let $n$ be a nonnegative integer. Give a combinatorial proof of the identity $$3^n=\binom{n}{0}\cdot2^0+\binom{n}{1}\cdot2^1+\binom{n}{2}\cdot2^2+\cdots+\binom{n}{n}\cdot2^n.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted.
 \begin{solution}
 
 % Type your solution to Problem 7 here.
@@ -211,42 +247,10 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 8}
-
+Let $n$ be a positive integer. Give a combinatorial proof of the identity $$1\cdot n+2\cdot\left(n-1\right)+3\cdot\left(n-2\right)+\cdots+\left(n-1\right)\cdot2+n\cdot1=\binom{n+2}{3}.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted.
 \begin{solution}
 
 % Type your solution to Problem 8 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 9                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 9}
-
-\begin{solution}
-
-% Type your solution to Problem 9 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 10                     %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 10}
-
-\begin{solution}
-
-% Type your solution to Problem 10 here.
 
 \end{solution}
 

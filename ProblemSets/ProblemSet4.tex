@@ -38,6 +38,7 @@
 \newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition} % Defines an environment with the heading "Definition". The * supresses the numbering.
+\newtheorem*{proposition}{Proposition} % Defines an environment with the heading "Proposition". The * supresses the numbering.
 \newenvironment{solution}{\bigskip\hrule{\hfill}}{\bigskip\hrule{\hfill}} % Defines an environment that draws lines to make clear where your solution starts and ends.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -102,7 +103,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 Define a relation $R$ on $\mathbb{N}\times\mathbb{N}$ by $$\left(a,b\right)\mathrel{R}\left(c,d\right)\Longleftrightarrow3a+d=b+3c.$$
 \begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
     \item Show that $R$ is an equivalence relation,
-    \item Describe the equivalence classes $\left[\left(0,0\right)\right]$, $\left[\left(1,2\right)\right]$ and $\left[\left(2,1\right)\right]$.
+    \item Describe, as simply as possible, the equivalence classes $\left[\left(0,0\right)\right]$, $\left[\left(1,2\right)\right]$ and $\left[\left(2,1\right)\right]$.
 \end{enumerate}
 \begin{solution}
 
@@ -119,7 +120,7 @@ Define a relation $R$ on $\mathbb{N}\times\mathbb{N}$ by $$\left(a,b\right)\math
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 2}
-Determine if the give relations have the following properties:
+Determine if the given relations have the following properties:
 \begin{itemize}
     \item irreflexive,
     \item antisymmetric,
@@ -148,12 +149,11 @@ Either prove they have the property or provide a counterexample.
 \section*{Problem 3}
 Determine all of the (distinct) equivalence classes of the following equivalence relations. Provide a brief justification on how you found all of the equivalence classes for each relation. \medskip
 
-\emph{There is no need to prove that they are equivalence relations; but you are encourage to prove they are equivalence relations in your own practice.}
+\noindent\emph{There is no need to prove that they are equivalence relations; but you are encourage to prove they are equivalence relations in your own practice.}
 
 \begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
     \item Consider the set $A=\{0,1,2,\dots,8\}$. Define a relation $R$ on $A$ by $a\mathrel{R}b\Longleftrightarrow a^2\equiv b^2\pmod{9}$.
-    \item On $\mathbb{Z}$, define a relation $R$ by $a\mathrel{R}b\Longleftrightarrow 3a-5b$ is even.
-    \item On $\mathbb{Z}$, define a relation $R$ by $a\mathrel{R}b\Longleftrightarrow 4\mid\left(a+3b\right)$.
+    \item Consider $\mathbb{Z}\times\mathbb{Z}$. Define a relation on $R$ by $\left(a,b\right)\mathrel{R}\left(c,d\right)\Longleftrightarrow a+b=c+d$.
 \end{enumerate}
 \begin{solution}
 
@@ -188,11 +188,11 @@ Let $R$ be a relation on a set $A$. Prove $R\cup R^{-1}$ is symmetric.
 \section*{Problem 5}
 \begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
     \item Let $X$ be a set with $n$ elements. How many possible reflexive relations on $X$ are there?
-    \item Let $A$ be a set with size $n$. For $x,y\in 2^A$, $x\mathrel{R}y\Longleftrightarrow x\cap y=\emptyset$. What is the cardinality of $R$?
+    \item Let $A$ be a set of size $n$. For $x,y\in 2^A$, $x\mathrel{R}y\Longleftrightarrow x\cap y=\emptyset$. What is the cardinality of $R$?
     \item What is the total number of partitions of $\left\{1,2,\dots,100\right\}$ that have exactly two parts in the partition? Remember, both parts should be non-empty.
     \item Suppose that a single character is stored in a computer using eight bits. How many bit patterns have at least two $1$'s? (Bits can either be $0$ or $1$).
     \item Twenty people are to be divided into two teams with ten players on each team. In how many ways can this be done?
-    \item Thirty-five discrete maths students are to be divided into secen discussion groups, each consisting of five students. In how many ways can this be done?
+    \item Thirty-five discrete maths students are to be divided into seven discussion groups, each consisting of five students. In how many ways can this be done?
 \end{enumerate}
 \begin{solution}
 
@@ -231,7 +231,7 @@ We are to place five posters along the wall of a corridor. There are six movie p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 7}
-Let $n$ be a nonnegative integer. Give a combinatorial proof of the identity $$3^n=\binom{n}{0}\cdot2^0+\binom{n}{1}\cdot2^1+\binom{n}{2}\cdot2^2+\cdots+\binom{n}{n}\cdot2^n.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted.
+Let $n$ be a nonnegative integer. Give a combinatorial proof of the identity $$3^n=\binom{n}{n}\cdot2^n+\binom{n}{n-1}\cdot2^{n-1}+\binom{n}{n-2}\cdot2^{n-2}+\cdots+\binom{n}{0}\cdot2^0.$$ You may not manipulate the question algebraically. Only a combinatorial proof will be accepted.
 \begin{solution}
 
 % Type your solution to Problem 7 here.

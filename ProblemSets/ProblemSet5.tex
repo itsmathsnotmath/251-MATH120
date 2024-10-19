@@ -100,6 +100,8 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 
 \section*{Problem 1}
 
+Prove the following statement by \emph{contrapositive}: For all $n\in\mathbb{N}$, if $2^n<n!$, then $n>3$.
+
 \begin{solution}
 
 % Type your solution to Problem 1 here.
@@ -115,7 +117,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 2}
-
+Prove the following statement by \emph{contrapositive}: For all $a,b\in\mathbb{Z}$, if $a^2\left(b^2-2b\right)$ is odd, then $a$ and $b$ are odd.
 \begin{solution}
 
 % Type your solution to Problem 2 here.
@@ -131,7 +133,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 3}
-
+Prove the following statement by \emph{contradiction}: Let $A$, $B$ and $C$ be sets. If $A\subseteq B$ and $B\cap C=\emptyset$, then $A\cap C=\emptyset$.
 \begin{solution}
 
 % Type your solution to Problem 3 here.
@@ -147,7 +149,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 4}
-
+Prove the following statement by \emph{contradiction}: Let $x,y\in\mathbb{Z}$. Then $x^2-4y-3\neq0$.
 \begin{solution}
 
 % Type your solution to Problem 4 here.
@@ -163,7 +165,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 5}
-
+Prove the following statement by \emph{smallest counterexample}: Let $n\in\mathbb{N}$. If $n\geq 1$, then $4\mid\left(5^n-1\right)$.
 \begin{solution}
 
 % Type your solution to Problem 5 here.
@@ -179,7 +181,26 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 6}
+The following is a ``proof'' of a false claim.
+\begin{claim}[false]
+Let $n\in\mathbb{N}$. Then
+\begin{align} % the align environment allows for labels, the align* does not
+   2n=0. \label{equation1} % we use labels to refer to equations in writing 
+\end{align}
+\end{claim}
+\begin{proof}
+    We prove the claim using proof by contradiction. 
 
+    For the sake of contradiction, suppose there exists a natural number such that \eqref{equation1} does not hold. By the Well-Ordering Principle, there exists a smallest $x\in\mathbb{N}$ such that $2x\neq0$. Note that $x\neq0$. Then there exist $i,j\in\mathbb{N}$ such that $i,j<x$ and $i+j=x$. Since $i,j<x$ we know $2i=0$ and $2j=0$. Observe
+    \begin{align*}
+        2x  & = 2\left(i+j\right) \\
+            & = 2i+2j \\
+            & = 0.
+    \end{align*}
+    This contradicts the assumption that $x$ is a counterexample to \eqref{equation1}. Therefore, \eqref{equation1} holds for all $n\in\mathbb{N}$.
+\end{proof}
+
+Find the logic error in this proof. That is, find the the part of the proof that does not follow and allows for the false contradiction. Do not say ``the proof is wrong because the claim is false''.
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -195,7 +216,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 7}
-
+Let $n\in\mathbb{Z}$. Use induction to prove that $\displaystyle\binom{2n}{n}<2^{2n-2}$ for all $n\geq5$.
 \begin{solution}
 
 % Type your solution to Problem 7 here.
@@ -211,42 +232,12 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 8}
+Let $n\in\mathbb{Z}$. Use induction to prove that $3\mid\left(n^3+2n\right)$.
 
+\emph{Note: we want to prove the xlaim for all integers, not just natural numbers.}
 \begin{solution}
 
 % Type your solution to Problem 8 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 9                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 9}
-
-\begin{solution}
-
-% Type your solution to Problem 9 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 10                     %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 10}
-
-\begin{solution}
-
-% Type your solution to Problem 10 here.
 
 \end{solution}
 

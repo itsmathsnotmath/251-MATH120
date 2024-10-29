@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                              %
+% This is a LaTeX file.  It is a text file that is compiled    %
+% by a program called LaTeX into a pretty PDF file.            %
+% If you're viewing this file on Overleaf,                     %
+% you'll see that PDF in the window to the right.              %
+%                                                              %
+% The LaTeX macro language is complicated, so we have inserted %
+% lots of documenting comments into the file.  Comments start  %
+% with `%' and continue to the end of the line.                %
+%                                                              %
+% Comments are provided to let you, the student, understand    %
+% what that part of the code is doing or to provide you with   %
+% instructions.                                                % 
+%                                                              %
+% Skip anything else you don't understand, or ask me.          %
+%                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\documentclass{article}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                              %
+% This is the preamble of the document. This is where we       %
+% declare the packages we need for the pdf file to compile     %
+% correctly. Packages contain the different commands we        %
+% need to use that allow us to format the document nicely.     %
+%                                                              %
+% You shouldn't need to edit any of these packages.            %
+%                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\usepackage{amsmath, amsthm, amsfonts, amssymb} % These packages contain most of the commands needed to format the maths symbols.
+\usepackage{enumerate} % Package that contains options for the \begin{enumerate} environment.
+\usepackage{hyperref} % Package that allows hyperlinks.
+\usepackage[dvipsnames]{xcolor} % Package that allows the use of a variety of colours.
+\newtheorem*{theorem}{Theorem} % Defines an environment with the heading "Theorem". The * supresses the numbering.
+\theoremstyle{definition}
+\newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
+\newtheorem*{definition}{Definition} % Defines an environment with the heading "Definition". The * supresses the numbering.
+\newtheorem*{reflection}{Reflection} % Defines an environment with the heading "Reflection". The * supresses the numbering.
+\newenvironment{solution}{\bigskip\hrule{\hfill}}{\bigskip\hrule{\hfill}}
+
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                              %
+% In the author command below, type in your name. The article  %
+% class will produce a title page using the command \maketitle %
+% containing the title of the document, the author name and    %
+% the date.                                                    %
+%                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\title{\textbf{MATH-UA 120 Discrete Mathematics: \\ Polished Proof 2 - First Draft}}
+\author{%
+    Peter Rabbit % Change to your name!
+}
+\date{Due Monday, November 4th, 2024} % The due date of the assignment. All assignemets are dues at 11:59pm on the date listed
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                              %
+% The body of the document is typed in between the lines       %
+% \begin{document} and \end{document}.                         %
+%                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+\maketitle % This command generate the title page information that was filled in in the preamble
+
+\vfill
+
+% The following are the instructions and guidelines for the polished proof. You should leave these alone and, after reading them, proceed to the problems.
+
+\section*{Polished Proof Instructions}
+
+\begin{itemize}
+    \item These are to be written up in \LaTeX{} and turned in on Gradescope.
+    \item \href{https://bit.ly/4gxMEGA}{\textbf{Click here to duplicate this \texttt{.tex} file in Overleaf}}.
+    \item Some tutorials on how to use \LaTeX{} can be found \href{https://www.overleaf.com/learn/latex/Tutorials}{\underline{here}}. If you have any questions about \LaTeX{} commands you can always ask your instructor for advice.
+    \item This polished proof assignment contains two problems and a reflection. Choose \textbf{one} problem to complete and submit for grading, and complete the reflection based on the given prompts.
+    \item Polished proofs are held to a higher standard than regular assignments and exams. You are given two chances to submit this proof: a first draft that will be scrutinised and given back with detailed feedback on how to make the proof ``polished'', and a second (final) draft where you will take on board the feedback of the first draft and make improvements to your proof.
+    \item This is the first draft of the assignment.
+    \item The score of the assignment is out of 15 marks: 9 come from the \href{https://drive.google.com/file/d/1YZhhGv5OyPdx0-VDa6i6cftkzPromMRY/view?usp=drive_link}{\textbf{RVF rubric}}, 3 points are given for the proper use of \LaTeX{} and the remaining 3 points are for a reflection of the assignment.
+    \item Your final score for the polished proof will be the maximum of the score of the first draft and the average of the scores of both drafts.
+\end{itemize}
+
+\vfill
+
+\section*{Statement on generative AI}
+
+In this and other mathematics courses, you are expected to construct clear and concise mathematical arguments based on statements proven in our text and class notes. Large language models such as ChatGPT are unable to produce this kind of solution. They also frequently generate circular logic and outright false results.
+ 
+You may use AI to summarise content, generate study plans, create problems, or do other study-related activities. You may not ask a chatbot to solve your quiz or homework problems, or do any assessment-related activities.
+ 
+You may use AI tools to edit your grammar and punctuation, but remember that mathematical English is not the same as academic English in other disciplines. 
+
+\vfill
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                     Proof Options                    %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Proof Options}
+
+Choose \textbf{one} of the following induction proofs to complete and submit for grading. Note, induction could mean regular induction or strong induction, it is up to you to determine which is appropriate.
+
+\begin{enumerate}
+    \item Suppose you have a pile of $n\geq 2$ rocks and split the pile into $n$ piles of one rock each by successively splitting a pile of rocks into two smaller piles. Each time you split a pile, find the product of the number of rocks from the two new piles (e.g., if you form two smaller piles of $r$ and $s$ rocks, the product you form is $rs$.) Prove that by induction on $n$ that no matter how the rocks are split, the sum of all of these products equals $n(n-1)/2$.
+    \item Let $A_0 = \left\{1/2,1\right\}$, and for each integer $n \in \mathbb{N}$, let $$A_{n+1} = \left\{ab~\vert~a,b \in A_n\right\} \cup \left\{\frac{a+b}{2}~\Bigg\vert~a,b\in A_n \right\}.$$
+    Finally, let $$A = \bigcup_{n=0}^\infty A_n.$$ Prove by induction on $n$ that if $a\in A$, then $0\leq a\leq 1$.
+\end{enumerate}
+
+\noindent You must explain every step of your proof. You may quote and use definitions and results from Sections 1--22 of the textbook or Appendix D, as long as you reference them appropriately.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                 Reflection Instructions              %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Reflection Instructions}
+
+Provide at least a paragraph explaining your process for completing the proof you have chosen above. You may use the following prompts to guide your response and any additional information needed to support your reflection. Responses consisting of one sentence or less for each of the following prompts will not be acceptable.
+
+\begin{itemize}
+    \item What was your strategy/procedure to the proof?
+    \item Were you following a template or problem during the proof?
+    \item What did you find challenging at first?
+    \item When did you realise you had figured it out?
+    \item How much time did you spend on the problem, before and after discovering the answer.
+    \item What do you think you learnt or improved by doing this assignment?
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vfill
+\hrule\medskip
+\noindent Start your submission on a new page.
+
+% \newpage
+
+% \begin{claim}
+%     % Write the statement you intend to prove.
+% \end{claim}
+
+% \begin{proof}
+%     % Write the your proof here.
+% \end{proof}
+
+% \begin{reflection}
+%     % Write your reflection here
+% \end{reflection}
+
+\end{document}
+%
+% Anything typed after \end{document} will not be included in the pdf

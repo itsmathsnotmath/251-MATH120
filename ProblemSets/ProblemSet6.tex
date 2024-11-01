@@ -76,7 +76,7 @@
     \item Write your solutions inside the \texttt{solution} environment.
     \item You are always encouraged to talk problems through with your peers and your instructor, but your write up should be done independently.
     \item Problems are graded on correctness and fluency.
-    \item Unless stated otherwise, all calculations require justification.
+    \item Unless stated otherwise, all answers require justification.
     \item Some tutorials on how to use \LaTeX{} can be found \href{https://www.overleaf.com/learn/latex/Tutorials}{\underline{here}}. If you have any questions about \LaTeX{} commands you can always ask your instructor for advice.
 \end{itemize}
 
@@ -99,7 +99,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 1}
-
+For each of the following functions, determine whether it is one-to-one and/or onto. 
 \begin{solution}
 
 % Type your solution to Problem 1 here.
@@ -115,7 +115,12 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 2}
-
+Let $A=\left\{1,2,3,4\right\}$ and $B=\left\{5,6,7\right\}$. Let $f$ be the relation $\left\{\left(1,5\right),\left(2,5\right),\left(3,6\right),\left(x,y\right)\right\}$, where the values of $\left(x,y\right)$ are to be filled by you. Give an example of $\left(x,y\right)\in A\times B$ so that
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item The relation $f$ is not a function.
+    \item The relation is a function from $A$ to $B$ but not onto $B$.
+    \item The relation is a function from $A$ to $B$ and is onto $B$.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 2 here.
@@ -131,7 +136,13 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 3}
-
+Let $A$ be an $n$-element set and let $i,j,k\in\mathbb{N}$ with $i+j+k=n$. How many functions $f:A\longrightarrow\left\{0,1,2\right\}$ are there for which all three of the below are satisfied:
+\begin{itemize}
+    \item $\left|\left\{a\in A~\big\vert~f\left(a\right)=0\right\}\right|=i$,
+    \item $\left|\left\{a\in A~\big\vert~f\left(a\right)=1\right\}\right|=j$,
+    \item $\left|\left\{a\in A~\big\vert~f\left(a\right)=2\right\}\right|=k$.
+\end{itemize}
+Your answer should be in terms of $n$, $i$, $j$ and $k$.
 \begin{solution}
 
 % Type your solution to Problem 3 here.
@@ -147,6 +158,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 4}
+You have $20$ jellybeans and you want to eat all of the jellybeans over the course of $2$ weeks. Suppose that you eat at least one jellybean a day. Prove, using the pigeonhole principle, that there is a set of consecutive days where you ate exactly $7$ jellybeans.
 
 \begin{solution}
 
@@ -163,7 +175,11 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 5}
-
+Let $A$ be a set of $10$ distinct integers between $1$ and $100$, inclusive.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Use the pigeonhole principle to prove that there are two different non-empty subsets of $A$ such that the sum of their elements are the same.
+    \item Prove that there are two non-empty \emph{disjoint} subsets of $A$ such that the sum of their elements is the same.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 5 here.
@@ -179,7 +195,9 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 6}
+Let $A=\left\{x\in\mathbb{Z}~\big\vert~3\mid x\right\}$. Show that $A$ and $\mathbb{N}$ have the same cardinality. \medskip
 
+\emph{Hint: Define a function $f:A\longrightarrow\mathbb{N}$ and show that it is a bijection.}
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -195,7 +213,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 7}
-
+Let $f:A\longrightarrow B$ be a function. For any subset $X$ of $A$ we define $$f\left(X\right)=\left\{f\left(x\right)~\big\vert~x\in X\right\}.$$ Let $X$ and $Y$ be subsets of $A$. Prove that $f\left(X\cup Y\right)=f\left(X\right)\cup f\left(Y\right)$.
 \begin{solution}
 
 % Type your solution to Problem 7 here.
@@ -211,7 +229,12 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 8}
-
+Suppose $A$ and $B$ are non-empty sets and $f:A\longrightarrow B$ and $g:B\longrightarrow A$ are functions that satisfy $g\circ f=\text{id}_A$.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Is is necessarily true that $f$ is surjective?
+    \item Is it necessarily true that $g$ is injective?
+    \item Is it necessarily true that $f\circ g=\text{id}_B$?
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 8 here.

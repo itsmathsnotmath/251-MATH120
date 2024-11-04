@@ -244,6 +244,37 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 
 \section*{Problem 10}
 
+\begin{enumerate}
+    \item  Perform the Euclidean Algorithm to show that the greatest common divisor of $61$ and $14$ is $1$.
+
+            \vfill
+                \begin{align*}
+                    61 & = 4\left(14\right) + 5 \\
+                    14 & = 2\left(5\right) + 4 \\
+                     5 & = 1\left(4\right) + 1 \\
+                     5 & = 4\left(1\right) + 0
+                \end{align*}
+            \vfill
+
+            \item The \emph{continued fraction} of $\dfrac{61}{14}$ is $$\mathrm{\frac{61}{14}}=
+4+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{4+0}}}.$$ Use this example and part (a) to write the continued fraction for $\dfrac{2024}{314}$.
+
+            \vfill
+                \begin{align*}
+                    2024 & = 6\left(314\right)+140 \\
+                     314 & = 2\left(140\right)+34 \\
+                     140 & = 4\left(34\right)+4 \\
+                      34 & = 8\left(4\right)+2 \\
+                       4 & = 2\left(2\right)+0
+                \end{align*}
+                So, $$\mathrm{\frac{2024}{314}}=
+6+\cfrac{1}{2+\cfrac{1}{4+\cfrac{1}{8+\cfrac{1}{2+0}}}}.$$
+            \vfill
+
+            Why do we care about continued fractions? They give us rational approximations for numbers. For example, $\pi$ has a continued fraction that never terminates: $$\mathrm{\dfrac{\pi}{1}}=
+3+\cfrac{1}{7+\cfrac{1}{15+\cfrac{1}{\cdots}}}.$$ \emph{Truncating} the continued fraction after just two steps gives us a common approximation for $\pi$: $\pi\approx3+\cfrac{1}{7}=\dfrac{22}{7}$.
+\end{enumerate}
+
 \begin{solution}
 
 % Type your solution to Problem 10 here.

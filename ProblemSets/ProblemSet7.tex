@@ -36,9 +36,11 @@
 \usepackage{hyperref} % Package that allows hyperlinks.
 \newtheorem*{theorem}{Theorem} % Defines an environment with the heading "Theorem". The * supresses the numbering.
 \newtheorem*{claim}{Claim} % Defines an environment with the heading "Claim". The * supresses the numbering.
+\newtheorem*{proposition}{Proposition} % Defines an environment with the heading "Proposition". The * supresses the numbering.
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition} % Defines an environment with the heading "Definition". The * supresses the numbering.
 \newenvironment{solution}{\bigskip\hrule{\hfill}}{\bigskip\hrule{\hfill}} % Defines an environment that draws lines to make clear where your solution starts and ends.
+\newcommand{\Var}{\text{Var}}
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                              %
@@ -101,7 +103,17 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 1}
-
+A fair coin is flipped $10$ times.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item What is the probability that there are an equal number of heads and tails?
+    \item What is the probability that the first three flips are heads?
+    \item What is the probability that there are an equal number of heads and tails \emph{and} the first three flips are heads?
+    \item What is the probability that there are an equal number of heads and tails \emph{or} the first three flips are heads? 
+    \begin{itemize}
+        \item[] For clarity, when we say $A$ \emph{or} $B$, this always includes the outcome where both events occur.
+    \end{itemize}
+    \item What is the probability that the first three flips are heads \emph{given} that an equal number of heads and tails are flipped?
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 1 here.
@@ -117,6 +129,14 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 2}
+
+An unfair coin shows heads with probability $p$ and tails with probability $1-p$. Suppose this coin is flipped $2$ times. Let $A$ be the event that the coin comes up heads first and tails second. Let $B$ be the event that the coin comes up tails first and heads second.
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Find $P\left(A\right)$.
+    \item Find $P\left(B\right)$.
+    \item Find $P\left(A\mid A\cup B\right)$.
+    \item Find $P\left(B\mid A\cup B\right)$.
+\end{enumerate}
 
 \begin{solution}
 
@@ -134,6 +154,12 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 
 \section*{Problem 3}
 
+Suppose that $A$ and $B$ are events in a sample space $\left(S,P\right)$. Prove or disprove:
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item If $P\left(A\cap B\right)=0$, then $P\left(A\mid B\right)=P\left(B\mid A\right)$ if and only if $P\left(A\right)=P\left(B\right)$.
+    \item If $P\left(A\right)>0$ and $P\left(B\right)>0$ but $P\left(A\cap B\right)=0$, then $P\left(A\mid B\right)=P\left(B\mid A\right)$. If proven, give an example of two such events with $P\left(A\right)\neq P\left(B\right)$.
+\end{enumerate}
+
 \begin{solution}
 
 % Type your solution to Problem 3 here.
@@ -150,6 +176,15 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 
 \section*{Problem 4}
 
+Consider the sample space $S=\left\{a,b,c\right\}$ with equal probability for each outcome. Define the random variables $X$ and $Y$ by the values in the table below. 
+\begin{center}
+    \begin{tabular}{c|ccc}
+            & $ a$ & $b$ & $c$ \\\hline
+        $X$ & $-1$ & $0$ & $1$ \\
+        $Y$ & $ 0$ & $1$ & $0$ \\
+    \end{tabular}
+\end{center}
+Check that $\Var\left(X+y\right)=\Var\left(X\right)+\Var\left(Y\right)$ but that $X$ and $Y$ are not independent.
 \begin{solution}
 
 % Type your solution to Problem 4 here.
@@ -166,6 +201,21 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 
 \section*{Problem 5}
 
+Provide an alternative proof to Proposition $31.7$ using any of the statements in Proposition $31.8$.
+
+\begin{proposition}[31.7]
+    Let $A$ and $B$ be events in a sample space $\left(S,P\right)$. Then $$P\left(A\right)+P\left(B\right)=P\left(A\cup B\right)+P\left(A\cap B\right).$$
+\end{proposition}
+\begin{proposition}[31.8]
+    Let $\left(S,P\right)$ be a sample space and let $A$ and $B$ be events. We have the following:
+\begin{enumerate}[(1)] % The enumerate environment produces a numbered list of items. The [(1)] ensures that the items are labelled with numbers contained in parenthesis.
+        \item If $A\cap B=\emptyset$, then $P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)$.
+        \item $P\left(A\cup B\right)\leq P\left(A\right)+P\left(B\right)$.
+        \item $P\left(S\right)=1$.
+        \item $P\left(\emptyset\right)=0$.
+        \item $P\left(\overline{A}\right)=1-P\left(A\right)$.
+    \end{enumerate}
+\end{proposition}
 \begin{solution}
 
 % Type your solution to Problem 5 here.
@@ -182,6 +232,13 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 
 \section*{Problem 6}
 
+Suppose we have $n$ identical tiles numbered $1,2,\dots n$ in a bag and we draw all of the tiles out, one at a time, without replacement. Let $X$ be a random variable that gives the number of tiles for which the number on the tile is larger than the number on the tiles drawn before it. \medskip
+
+For example, if $n=4$ and we drew the tiles in the order $4,2,1,3$, then $X=1$ because only the first tile's number is larger than all of tile numbers before it. If we drew the tiles in the order $3,1,2,4$, then $X=2$ because $3$ and $4$ have numbers larger than all of the ones that came before them. \medskip
+
+Prove that $E\left(X\right)=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}$. \medskip
+
+\emph{Hint: Write $X$ as the sum of simpler random variables.}
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -197,6 +254,7 @@ You may use AI tools to edit your grammar and punctuation, but remember that mat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Problem 7}
+
 
 \begin{solution}
 

@@ -176,15 +176,21 @@ Suppose that $A$ and $B$ are events in a sample space $\left(S,P\right)$. Prove 
 
 \section*{Problem 4}
 
-Consider the sample space $S=\left\{a,b,c\right\}$ with equal probability for each outcome. Define the random variables $X$ and $Y$ by the values in the table below. 
-\begin{center}
-    \begin{tabular}{c|ccc}
-            & $ a$ & $b$ & $c$ \\\hline
-        $X$ & $-1$ & $0$ & $1$ \\
-        $Y$ & $ 0$ & $1$ & $0$ \\
-    \end{tabular}
-\end{center}
-Check that $\Var\left(X+y\right)=\Var\left(X\right)+\Var\left(Y\right)$ but that $X$ and $Y$ are not independent.
+A multiple choice exam has four options for each of the problems. Suppose a student has studied enough so that:
+\begin{itemize}
+    \item There is a $50\%$ chance that they know the answer to a problem.
+    \item There is a $25\%$ chance that they can eliminate one of the incorrect answers.
+    \item There is a $25\%$ chance that they don't know how to solve the problem.
+\end{itemize}
+If the student knows the answer to a problem they will answer it correct;y. If they do not know the answer they will choose randomly from the three or four options. 
+
+You want the exam to to accurately measure what the students does and does not know, not how lucky they can be at guessing answers.
+
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with numbers contained in parenthesis.
+    \item Calculate the probability that the student knew to eliminate one option and got the answer correct.
+    \item Calculate the probability that the student gets the answer correct.
+    \item Calculate the probability that the student knew how to do the problem given that they got the answer correct.
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 4 here.
@@ -232,13 +238,15 @@ Provide an alternative proof to Proposition $31.7$ using any of the statements i
 
 \section*{Problem 6}
 
-Suppose we have $n$ identical tiles numbered $1,2,\dots n$ in a bag and we draw all of the tiles out, one at a time, without replacement. Let $X$ be a random variable that gives the number of tiles for which the number on the tile is larger than the number on the tiles drawn before it. \medskip
-
-For example, if $n=4$ and we drew the tiles in the order $4,2,1,3$, then $X=1$ because only the first tile's number is larger than all of tile numbers before it. If we drew the tiles in the order $3,1,2,4$, then $X=2$ because $3$ and $4$ have numbers larger than all of the ones that came before them. \medskip
-
-Prove that $E\left(X\right)=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}$. \medskip
-
-\emph{Hint: Write $X$ as the sum of simpler random variables.}
+Consider the sample space $S=\left\{a,b,c\right\}$ with equal probability for each outcome. Define the random variables $X$ and $Y$ by the values in the table below. 
+\begin{center}
+    \begin{tabular}{c|ccc}
+            & $ a$ & $b$ & $c$ \\\hline
+        $X$ & $-1$ & $0$ & $1$ \\
+        $Y$ & $ 0$ & $1$ & $0$ \\
+    \end{tabular}
+\end{center}
+Check that $\Var\left(X+y\right)=\Var\left(X\right)+\Var\left(Y\right)$ but that $X$ and $Y$ are not independent.
 \begin{solution}
 
 % Type your solution to Problem 6 here.
@@ -255,7 +263,13 @@ Prove that $E\left(X\right)=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}$. \meds
 
 \section*{Problem 7}
 
+Suppose we have $n$ identical tiles numbered $1,2,\dots n$ in a bag and we draw all of the tiles out, one at a time, without replacement. Let $X$ be a random variable that gives the number of tiles for which the number on the tile is larger than the number on the tiles drawn before it. \medskip
 
+For example, if $n=4$ and we drew the tiles in the order $4,2,1,3$, then $X=1$ because only the first tile's number is larger than all of tile numbers before it. If we drew the tiles in the order $3,1,2,4$, then $X=2$ because $3$ and $4$ have numbers larger than all of the ones that came before them. \medskip
+
+Prove that $E\left(X\right)=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}$. \medskip
+
+\emph{Hint: Write $X$ as the sum of simpler random variables.}
 \begin{solution}
 
 % Type your solution to Problem 7 here.
@@ -272,41 +286,16 @@ Prove that $E\left(X\right)=1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}$. \meds
 
 \section*{Problem 8}
 
+\begin{enumerate}[a)] % The enumerate environment produces a numbered list of items. The [a)] ensures that the items are labelled with letters instead.
+    \item Let $\left(S,P\right)$ be a sample space and let $A\subseteq S$ be an event. Define a random vairable $I_A$ whose value at $s\in S$ is $$I_A\left(s\right)=\begin{cases}1 & \text{if }s\in A,\text{ and} \\ 0 & \text{otherwise.}\end{cases}$$ The random variable $I_A$ is called an \emph{indicator} random variable because its value indicates whether or not an event occurred. 
+
+    Prove that $E\left(I_A\right)=P\left(A\right)$.
+
+    \item Let $\left(S,P\right)$ be a sample space and let $X:S\longrightarrow\mathbf{N}$ be a non-negative-integer-valued random variable. Let $a$ be a positive integer. Prove that $$P\left(X\geq a\right)\leq\frac{E\left(X\right)}{a}.$$
+\end{enumerate}
 \begin{solution}
 
 % Type your solution to Problem 8 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 9                      %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 9}
-
-\begin{solution}
-
-% Type your solution to Problem 9 here.
-
-\end{solution}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%                       Problem 10                     %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Problem 10}
-
-\begin{solution}
-
-% Type your solution to Problem 10 here.
 
 \end{solution}
 
